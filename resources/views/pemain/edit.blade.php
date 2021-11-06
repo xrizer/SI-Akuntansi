@@ -26,3 +26,5 @@
 
   <button type="submit" class="btn btn-primary ml-4">Edit</button>
 </form>
+
+@endsection

@@ -1,6 +1,16 @@
 @extends('template')
 @section('main')
-        <div class="container-fluid">
+
+
+<div class="section-body">
+<!--             <h2 class="section-title">Daftar pemain bola</h2>
+            <p class="section-lead">Halaman ini adalah halaman berisi nama2 pemain bola</p> -->
+            <div class="card">
+              <div class="card-header">
+                <h4>Pemain Bola</h4>
+              </div>
+              <div class="card-body">
+                <div class="container-fluid">
 
         <table  class="table table-hover ml-4">
           <thead>
@@ -38,43 +48,15 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Tambah data
             </button>
-
-
         </div>
                 <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
+
+        </div>
+
               </div>
-              <div class="modal-body">
-                <form action="/pemain/add" method="POST">
-                  {{csrf_field()}}
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nama</label>
-                    <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama">
-                 </div>
-                  <div class="form-group">
-                <label for="exampleInputPassword1">Jenis Kelamin</label>
-                  <input name="jenis_kelamin" type="text" class="form-control" id="exampleInputPassword1" placeholder="Jenis kelamin">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Asal Klub</label>
-                    <input name="asal_klub" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Asal Klub">
-                 </div>
-                 <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
+
           </div>
-
-        </div>
-        </div>
-
+</div>
 
 @endsection
 
