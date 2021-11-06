@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/daftar_akun', function () {
+    return view('pemain.daftar_akun');
+});
 // halaman awal
 Route::get('/pemain','PemainController@index');
 // halaman create
@@ -28,6 +31,7 @@ Route::post('/pemain/{id}/edit', 'PemainController@update');
 Route::get('/pemain/{id}/delete', 'PemainController@destroy');
 // // menampilkan tombol edit
 Route::get('/pemain/{id}/edit', 'PemainController@edit');
+
 
 Auth::routes();
 
