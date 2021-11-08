@@ -5,7 +5,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <h4>Advanced Table</h4>
+                  <h4>Daftar Akun</h4>
                   <div class="card-header-form">
                     <form>
                           <a class="btn btn-info" href="/pemain/daftarakun/add" role="button"> <i class="fas fa-plus"></i> Buat akun baru</a>
@@ -34,6 +34,7 @@
                         <th>Saldo</th>
                         <th>Action</th>
                       </tr>
+                      @foreach($daftarakunz as $akun)
                       <tr>
                         <td class="p-0 text-center">
                           <div class="custom-checkbox custom-control">
@@ -41,13 +42,14 @@
                             <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                           </div>
                         </td>
-                        <td>1-1001</td>
-                        <td>Beban Sewa</td>
-                        <td>Beban</td>
-                        <td>Pinjaman</td>
-                        <td>200.000</td>
-                        <td><a href="#" class="btn btn-danger">Hapus</a></td>
+                        <td>{{$akun->kode_akun}}</td>
+                        <td>{{$akun->nama_akun}}</td>
+                        <td>{{$akun->kategori_akun}}</td>
+                        <td>{{$akun->sub_akun}}</td>
+                        <td>{{$akun->saldo}}</td>
+                        <td><a href="/pemain/daftarakun/{{$akun->id}}/delete" class="btn btn-danger">Hapus</a></td>
                       </tr>
+                      @endforeach
                     </tbody></table>
                   </div>
                 </div>

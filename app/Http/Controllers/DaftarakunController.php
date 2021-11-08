@@ -13,7 +13,8 @@ class DaftarakunController extends Controller
     }
       public function index1()
     {
-        return view('pemain.daftarakun');
+        $daftarakunz = daftarakuntansi::all();
+        return view('pemain.daftarakun',compact('daftarakunz'));
     }
      public function index2()
     {
@@ -23,6 +24,14 @@ class DaftarakunController extends Controller
       public function create(Request $request)
     {
         daftarakuntansi::create($request->all());
-        return redirect('/pemain/daftarakun/add');    
+        return redirect('/pemain/daftarakun');    
     }
+      public function destroy($id)
+    {
+        $akun = daftarakuntansi::find($id);
+        $akun->delete();
+        return redirect('/pemain/daftarakun');   
+    }
+
+    
 }
