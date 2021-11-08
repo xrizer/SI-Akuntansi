@@ -248,7 +248,7 @@
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
               <li class="nav-item">
-                <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="/pemain/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               </li>
               <li class="nav-item">
                 <a href="/pemain/daftarakun" class="nav-link"><i class="fas fa-columns"></i> <span>Daftar Akun</span></a>
