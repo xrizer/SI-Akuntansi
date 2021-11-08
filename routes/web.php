@@ -14,9 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/daftar_akun', function () {
-    return view('pemain.daftar_akun');
-});
+Route::get('/pemain/daftarakun','DaftarakunController@index1');
+Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
 // halaman awal
 Route::get('/pemain','PemainController@index');
 // halaman create

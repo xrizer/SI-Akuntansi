@@ -250,8 +250,8 @@
               <li class="nav-item">
                 <a href="#" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               </li>
-              <li class="nav-item dropdown">
-                <a href="/daftar_akun" class="nav-link" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Daftar Akun</span></a>
+              <li class="nav-item">
+                <a href="/pemain/daftarakun" class="nav-link"><i class="fas fa-columns"></i> <span>Daftar Akun</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Input Jurnal</span></a>
