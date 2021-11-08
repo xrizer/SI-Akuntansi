@@ -10,8 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use App\Http\Controllers\AuthController;
-use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -31,7 +29,5 @@ Route::post('/pemain/{id}/edit', 'PemainController@update');
 Route::get('/pemain/{id}/delete', 'PemainController@destroy');
 // // menampilkan tombol edit
 Route::get('/pemain/{id}/edit', 'PemainController@edit');
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
