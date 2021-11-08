@@ -1,6 +1,16 @@
 @extends('template')
 @section('main')
-        <div class="container-fluid">
+
+
+<div class="section-body">
+<!--             <h2 class="section-title">Daftar pemain bola</h2>
+            <p class="section-lead">Halaman ini adalah halaman berisi nama2 pemain bola</p> -->
+            <div class="card">
+              <div class="card-header">
+                <h4>Pemain Bola</h4>
+              </div>
+              <div class="card-body">
+                <div class="container-fluid">
 
         <table  class="table table-hover ml-4">
           <thead>
@@ -38,11 +48,19 @@
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
             Tambah data
             </button>
-
-
         </div>
                 <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        </div>
+
+              </div>
+
+          </div>
+</div>
+
+@endsection
+@section('modal')
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -72,11 +90,7 @@
             </div>
           </div>
 
-        </div>
-        </div>
-
-
+</div>
 @endsection
-
 
 
