@@ -10,14 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 Route::get('/pemain/dashboard','DaftarakunController@dashboard');
 Route::get('/pemain/daftarakun','DaftarakunController@index1');
 Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
 Route::get('/pemain/daftarakun/create','DaftarakunController@create');
+=======
+>>>>>>> 1f58240116b1cadfabe37a240f30f0422fc523cf
 // halaman awal
 Route::get('/pemain','PemainController@index');
 // halaman create
@@ -32,8 +36,5 @@ Route::post('/pemain/{id}/edit', 'PemainController@update');
 Route::get('/pemain/{id}/delete', 'PemainController@destroy');
 // // menampilkan tombol edit
 Route::get('/pemain/{id}/edit', 'PemainController@edit');
-
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
