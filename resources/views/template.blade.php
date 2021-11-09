@@ -14,6 +14,7 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="/stisla/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/components.css">
+  @yield('templatecss')
 </head>
 
 <body>
@@ -248,8 +249,9 @@
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
               <li class="nav-item">
-                <a href="/pemain/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
               </li>
+              <li class="menu-header">Aktivitas</li>
               <li class="nav-item">
                 <a href="/pemain/daftarakun" class="nav-link"><i class="fas fa-columns"></i> <span>Daftar Akun</span></a>
               </li>
@@ -257,7 +259,7 @@
                 <a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Input Jurnal</span></a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link"><i class="fas fa-th"></i> <span>Laporan</span></a>
+                <a href="/pemain/laporan" class="nav-link"><i class="fas fa-th"></i> <span>Laporan</span></a>
               </li>
               <!-- <li class="menu-header">Stisla</li>
               <li class="nav-item dropdown">
@@ -372,11 +374,6 @@
         <section class="section">
           <div class="section-header">
             <h1>Default Layout</h1>
-            <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-              <div class="breadcrumb-item"><a href="#">Layout</a></div>
-              <div class="breadcrumb-item">Default Layout</div>
-            </div>
           </div>
            @yield('main')
 

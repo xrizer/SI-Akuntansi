@@ -16,11 +16,26 @@ Route::get('/', function () {
     return view('welcome');
 });
 // <<<<<<< HEAD
-Route::get('/pemain/dashboard','DaftarakunController@dashboard');
+// authentication
+Route::get('/login','AuthController@login');
+Route::get('/postlogin','AuthController@login');
+
+// dashboard
+Route::get('/dashboard','DaftarakunController@dashboard');
+
+// menu daftar akun
 Route::get('/pemain/daftarakun','DaftarakunController@index1');
 Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
 Route::post('/pemain/daftarakun/create','DaftarakunController@create');
 Route::get('/pemain/daftarakun/{id}/delete', 'DaftarakunController@destroy');
+
+// menu daftar laporan
+Route::get('/pemain/laporan','LaporanController@index');
+Route::get('/pemain/jurnalumum','LaporanController@jurnalumum');
+Route::get('/pemain/bukubesar','LaporanController@bukubesar');
+Route::get('/pemain/neracasaldo','LaporanController@neracasaldo');
+
+
 // =======
 // >>>>>>> 1f58240116b1cadfabe37a240f30f0422fc523cf
 // halaman awal
@@ -37,4 +52,4 @@ Route::post('/pemain/{id}/edit', 'PemainController@update');
 Route::get('/pemain/{id}/delete', 'PemainController@destroy');
 // // menampilkan tombol edit
 Route::get('/pemain/{id}/edit', 'PemainController@edit');
-Route::get('/home', 'HomeController@index')->name('home');
+
