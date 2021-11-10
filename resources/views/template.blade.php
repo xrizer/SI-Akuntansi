@@ -256,7 +256,7 @@
                 <a href="/pemain/daftarakun" class="nav-link"><i class="fas fa-columns"></i> <span>Daftar Akun</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Input Jurnal</span></a>
+                <a class="nav-link" href="/pemain/inputjurnal"><i class="far fa-square"></i> <span>Input Jurnal</span></a>
               </li>
               <li class="nav-item">
                 <a href="/pemain/laporan" class="nav-link"><i class="fas fa-th"></i> <span>Laporan</span></a>

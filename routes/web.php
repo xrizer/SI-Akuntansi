@@ -16,9 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 // <<<<<<< HEAD
-// authentication
-Route::get('/login','AuthController@login');
-Route::get('/postlogin','AuthController@login');
+// authentication nyoba doang
+// Route::get('/login','AuthController@login');
+// Route::get('/postlogin','AuthController@login');
 
 // dashboard
 Route::get('/dashboard','DaftarakunController@dashboard');
@@ -29,12 +29,18 @@ Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
 Route::post('/pemain/daftarakun/create','DaftarakunController@create');
 Route::get('/pemain/daftarakun/{id}/delete', 'DaftarakunController@destroy');
 
+// menu input jurnal
+Route::get('/pemain/inputjurnal','InputjurnalController@index');
+
+
 // menu daftar laporan
 Route::get('/pemain/laporan','LaporanController@index');
 Route::get('/pemain/jurnalumum','LaporanController@jurnalumum');
 Route::get('/pemain/bukubesar','LaporanController@bukubesar');
 Route::get('/pemain/neracasaldo','LaporanController@neracasaldo');
-
+Route::get('/pemain/labarugi','LaporanController@labarugi');
+Route::get('/pemain/neraca','LaporanController@neraca');
+Route::get('/pemain/perubahanmodal','LaporanController@perubahanmodal');
 
 // =======
 // >>>>>>> 1f58240116b1cadfabe37a240f30f0422fc523cf
