@@ -13,49 +13,55 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 // <<<<<<< HEAD
-// authentication nyoba doang
-// Route::get('/login','AuthController@login');
-// Route::get('/postlogin','AuthController@login');
+// authentication
+Route::get('/login','AuthController@login')->name('login');
+Route::post('/postlogin','AuthController@postlogin');
+Route::get('/logout','AuthController@logout');
 
-// dashboard
-Route::get('/dashboard','DaftarakunController@dashboard');
+Route::group(['middleware' => 'auth'],function () {
+    // dashboard
+    Route::get('/dashboard','DaftarakunController@dashboard');
 
-// menu daftar akun
-Route::get('/pemain/daftarakun','DaftarakunController@index1');
-Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
-Route::post('/pemain/daftarakun/create','DaftarakunController@create');
-Route::get('/pemain/daftarakun/{id}/delete', 'DaftarakunController@destroy');
+    // menu daftar akun
+    Route::get('/pemain/daftarakun','DaftarakunController@index1');
+    Route::get('/pemain/daftarakun/add','DaftarakunController@index2');
+    Route::post('/pemain/daftarakun/create','DaftarakunController@create');
+    Route::get('/pemain/daftarakun/{id}/delete', 'DaftarakunController@destroy');
 
-// menu input jurnal
-Route::get('/pemain/inputjurnal','InputjurnalController@index');
+    // menu input jurnal
+    Route::get('/pemain/inputjurnal','InputjurnalController@index');
 
 
-// menu daftar laporan
-Route::get('/pemain/laporan','LaporanController@index');
-Route::get('/pemain/jurnalumum','LaporanController@jurnalumum');
-Route::get('/pemain/bukubesar','LaporanController@bukubesar');
-Route::get('/pemain/neracasaldo','LaporanController@neracasaldo');
-Route::get('/pemain/labarugi','LaporanController@labarugi');
-Route::get('/pemain/neraca','LaporanController@neraca');
-Route::get('/pemain/perubahanmodal','LaporanController@perubahanmodal');
+    // menu daftar laporan
+    Route::get('/pemain/laporan','LaporanController@index');
+    Route::get('/pemain/jurnalumum','LaporanController@jurnalumum');
+    Route::get('/pemain/bukubesar','LaporanController@bukubesar');
+    Route::get('/pemain/neracasaldo','LaporanController@neracasaldo');
+    Route::get('/pemain/labarugi','LaporanController@labarugi');
+    Route::get('/pemain/neraca','LaporanController@neraca');
+    Route::get('/pemain/perubahanmodal','LaporanController@perubahanmodal'); 
+});
+
+Route::group(['middleware' => ['auth','checkRole:admin']],function (){
+    // halaman awal
+    Route::get('/pemain','PemainController@index');
+    // halaman create
+    Route::post('/pemain/add', 'PemainController@create');
+    // // submit baru
+    Route::post('/pemain', 'TemansController@store');
+    // // klik detail pemain
+    Route::get('/pemain/{id}','PemainController@show');
+    // // klik tombol update
+    Route::post('/pemain/{id}/edit', 'PemainController@update');
+    // // klik tombol delete
+    Route::get('/pemain/{id}/delete', 'PemainController@destroy');
+    // // menampilkan tombol edit
+    Route::get('/pemain/{id}/edit', 'PemainController@edit');
+});
 
 // =======
 // >>>>>>> 1f58240116b1cadfabe37a240f30f0422fc523cf
-// halaman awal
-Route::get('/pemain','PemainController@index');
-// halaman create
-Route::post('/pemain/add', 'PemainController@create');
-// // submit baru
-Route::post('/pemain', 'TemansController@store');
-// // klik detail pemain
-Route::get('/pemain/{id}','PemainController@show');
-// // klik tombol update
-Route::post('/pemain/{id}/edit', 'PemainController@update');
-// // klik tombol delete
-Route::get('/pemain/{id}/delete', 'PemainController@destroy');
-// // menampilkan tombol edit
-Route::get('/pemain/{id}/edit', 'PemainController@edit');
 
