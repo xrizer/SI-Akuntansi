@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Layout &rsaquo; Default &mdash; Stisla</title>
+  <title>5C Foundation &rsaquo; Default &mdash; Stisla</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <!-- CSS Libraries -->
 
   <!-- Template CSS -->
@@ -218,7 +218,11 @@
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="/stisla/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+<<<<<<< HEAD
             <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div></a>
+=======
+            <div class="d-sm-none d-lg-inline-block">Hi,Admin</div></a>
+>>>>>>> 763b5c7df02c8b9bff65cbaba1e1b19b28918a33
             <div class="dropdown-menu dropdown-menu-right">
               <div class="dropdown-title">Logged in 5 min ago</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
@@ -372,9 +376,7 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="section-header">
-            <h1>Default Layout</h1>
-          </div>
+           @yield('judul')
            @yield('main')
 
            <!-- format cardnya disini -->
@@ -401,7 +403,7 @@
 
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2021 <div class="bullet"></div> Created by <a href="https://nauval.in/">Tim Implementasi</a>
+          Copyright &copy; 2021 <div class="bullet"></div>Made with <i class="icon ion-heart" style="color: #e25555;"></i> by <a href="https://nauval.in/">Tim Implementasi</a>
         </div>
         <div class="footer-right">
           2.3.0

@@ -1,4 +1,9 @@
 @extends('template')
+@section('judul')
+        <div class="section-header">
+            <h1>Daftar Akun</h1>
+          </div>
+@endsection
 @section('main')
 
         <div class="section-body">

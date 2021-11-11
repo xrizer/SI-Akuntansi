@@ -1,4 +1,9 @@
 @extends('template')
+@section('judul')
+        <div class="section-header">
+            <h1>Dashboard</h1>
+          </div>
+@endsection
 @section('main')
  <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
